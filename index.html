@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>JoomlaBrowser by joomla-projects</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>JoomlaBrowser</h1>
+        <p>An extended Webdriver Browser to navigate through Joomla sites with Codeception</p>
+
+        <p class="view"><a href="https://github.com/joomla-projects/joomla-browser">View the Project on GitHub <small>joomla-projects/joomla-browser</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/joomla-projects/joomla-browser/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/joomla-projects/joomla-browser/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/joomla-projects/joomla-browser">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="joomla-browser-codeception-module" class="anchor" href="#joomla-browser-codeception-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Joomla Browser (Codeception Module)</h1>
+
+<p><a href="https://packagist.org/packages/joomla-projects/joomla-browser"><img src="https://poser.pugx.org/joomla-projects/joomla-browser/v/stable" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/joomla-projects/joomla-browser"><img src="https://poser.pugx.org/joomla-projects/joomla-browser/downloads" alt="Total Downloads"></a> <a href="https://packagist.org/packages/joomla-projects/joomla-browser"><img src="https://poser.pugx.org/joomla-projects/joomla-browser/v/unstable" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/joomla-projects/joomla-browser"><img src="https://poser.pugx.org/joomla-projects/joomla-browser/license" alt="License"></a></p>
+
+<h2>
+<a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h2>
+
+<ul>
+<li><a href="#the-joomla-browser">The JoomlaBrowser</a></li>
+<li>
+<a href="#using-instructions">Using the JoomlaBrowser to test Joomla Sites</a>
+
+<ul>
+<li><a href="#download">Download</a></li>
+<li><a href="loading-the-module-in-codeception">Loading the Module in Codeception</a></li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="the-joomla-browser" class="anchor" href="#the-joomla-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Joomla Browser</h2>
+
+<p>Joomla Browser is a Codeception.com Module. It allows to build <code>system tests</code> for a Joomla site much faster providing a set of predefined tasks. </p>
+
+<p>In between the available functions you can find:</p>
+
+<ul>
+<li>INSTALLATION:
+
+<ul>
+<li>install joomla</li>
+<li>install Joomla removing Installation Folder</li>
+<li>install Joomla Multilingual Site</li>
+</ul>
+</li>
+<li>ADMINISTRATOR:
+
+<ul>
+<li>do administrator login</li>
+<li>do administrator logout</li>
+<li>set error reporting to development</li>
+<li>search for item</li>
+<li>check for item existence</li>
+<li>publish a module</li>
+<li>setting a module position and publishing it</li>
+<li>EXTENSION MANAGER
+
+<ul>
+<li>install extension from Folder</li>
+<li>install extension from url</li>
+<li>enable plugin</li>
+<li>uninstall extension</li>
+<li>search result plugin name</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>FRONTEND:
+
+<ul>
+<li>do frontend login</li>
+</ul>
+</li>
+<li>ADMINISTRATOR USER INTERFACE:
+
+<ul>
+<li>select option in chosen</li>
+<li>select Option In Radio Field</li>
+<li>select Multiple Options In Chosen</li>
+</ul>
+</li>
+<li>OTHERS:
+
+<ul>
+<li>check for php notices or warnings</li>
+</ul>
+</li>
+</ul>
+
+<p>The Joomla Browser is constantly evolving and more methods are being added every month. 
+To find a full list of them check the public methods at: <a href="https://github.com/joomla-projects/joomla-browser/blob/develop/src/JoomlaBrowser.php">https://github.com/joomla-projects/joomla-browser/blob/develop/src/JoomlaBrowser.php</a></p>
+
+<h2>
+<a id="joomla-browser-in-action" class="anchor" href="#joomla-browser-in-action" aria-hidden="true"><span class="octicon octicon-link"></span></a>Joomla Browser in action</h2>
+
+<p>If you want to see a working example of JoomlaBrowser check weblinks tests: <a href="https://github.com/joomla-extensions/weblinks#tests">https://github.com/joomla-extensions/weblinks#tests</a></p>
+
+<h2>
+<a id="using-instructions" class="anchor" href="#using-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Instructions</h2>
+
+<p>Update Composer.json file in your project, and download</p>
+
+<h3>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h3>
+
+<pre><code>composer require joomla-projects/joomla-browser:dev-develop
+</code></pre>
+
+<h3>
+<a id="loading-the-module-in-codeception" class="anchor" href="#loading-the-module-in-codeception" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading the Module in Codeception</h3>
+
+<p>Finally make the following changes in Acceptance.suite.yml to add JoomlaBrowser as a Module. </p>
+
+<p>Your original <code>acceptance.suite.yml</code>probably looks like:</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s"><span class="pl-ent">modules:</span></span>
+    <span class="pl-s"><span class="pl-ent">enabled:</span></span>
+        <span class="pl-s">- <span class="pl-s">WebDriver</span></span>
+        <span class="pl-s">- <span class="pl-s">AcceptanceHelper</span></span>
+    <span class="pl-s"><span class="pl-ent">config:</span></span>
+        <span class="pl-s"><span class="pl-ent">WebDriver:</span></span>
+            <span class="pl-s"><span class="pl-ent">url:</span> <span class="pl-s"><span class="pl-pds">'</span>http://localhost/joomla-cms3/<span class="pl-pds">'</span></span><span class="pl-s">     </span></span><span class="pl-c"># the url that points to the joomla cms</span>
+            <span class="pl-s"><span class="pl-ent">browser:</span> <span class="pl-s"><span class="pl-pds">'</span>firefox<span class="pl-pds">'</span></span></span>
+            <span class="pl-s"><span class="pl-ent">window_size:</span> <span class="pl-s">1024x768</span></span>
+            <span class="pl-s"><span class="pl-ent">capabilities:</span></span>
+              <span class="pl-s"><span class="pl-ent">unexpectedAlertBehaviour:</span> <span class="pl-s"><span class="pl-pds">'</span>accept<span class="pl-pds">'</span></span></span>
+        <span class="pl-s"><span class="pl-ent">AcceptanceHelper:</span></span>
+            ...</pre></div>
+
+<p>You should remove the WebDriver module and replace it with the JoomlaBrowser module:</p>
+
+<div class="highlight highlight-source-yaml"><pre>    <span class="pl-s"><span class="pl-ent">config:</span></span>
+        <span class="pl-s"><span class="pl-ent">JoomlaBrowser:</span></span>
+            <span class="pl-s"><span class="pl-ent">url:</span> <span class="pl-s"><span class="pl-pds">'</span>http://localhost/joomla-cms/<span class="pl-pds">'</span></span><span class="pl-s">     </span></span><span class="pl-c"># the url that points to the joomla installation at /tests/system/joomla-cms</span>
+            <span class="pl-s"><span class="pl-ent">browser:</span> <span class="pl-s"><span class="pl-pds">'</span>firefox<span class="pl-pds">'</span></span></span>
+            <span class="pl-s"><span class="pl-ent">window_size:</span> <span class="pl-s">1024x768</span></span>
+            <span class="pl-s"><span class="pl-ent">capabilities:</span></span>
+              <span class="pl-s"><span class="pl-ent">unexpectedAlertBehaviour:</span> <span class="pl-s"><span class="pl-pds">'</span>accept<span class="pl-pds">'</span></span></span>
+            <span class="pl-s"><span class="pl-ent">username:</span> <span class="pl-s"><span class="pl-pds">'</span>admin<span class="pl-pds">'</span></span></span>
+            <span class="pl-s"><span class="pl-ent">password:</span> <span class="pl-s"><span class="pl-pds">'</span>admin<span class="pl-pds">'</span></span></span>
+            <span class="pl-s"><span class="pl-ent">database host:</span> <span class="pl-s"><span class="pl-pds">'</span>localhost<span class="pl-pds">'</span></span><span class="pl-s">             </span></span><span class="pl-c"># place where the Application is Hosted #server Address</span>
+            <span class="pl-s"><span class="pl-ent">database user:</span> <span class="pl-s"><span class="pl-pds">'</span>root<span class="pl-pds">'</span></span><span class="pl-s">                  </span></span><span class="pl-c"># MySQL Server user ID, usually root</span>
+            <span class="pl-s"><span class="pl-ent">database password:</span> <span class="pl-s"><span class="pl-pds">'</span>1234<span class="pl-pds">'</span></span><span class="pl-s">                  </span></span><span class="pl-c"># MySQL Server password, usually empty or root</span>
+            <span class="pl-s"><span class="pl-ent">database name:</span> <span class="pl-s"><span class="pl-pds">'</span>dbname<span class="pl-pds">'</span></span><span class="pl-s">            </span></span><span class="pl-c"># DB Name, at the Server</span>
+            <span class="pl-s"><span class="pl-ent">database type:</span> <span class="pl-s"><span class="pl-pds">'</span>mysqli<span class="pl-pds">'</span></span><span class="pl-s">                </span></span><span class="pl-c"># type in lowercase one of the options: MySQL\MySQLi\PDO</span>
+            <span class="pl-s"><span class="pl-ent">database prefix:</span> <span class="pl-s"><span class="pl-pds">'</span>jos_<span class="pl-pds">'</span></span><span class="pl-s">                </span></span><span class="pl-c"># DB Prefix for tables</span>
+            <span class="pl-s"><span class="pl-ent">install sample data:</span> <span class="pl-s"><span class="pl-pds">'</span>Yes<span class="pl-pds">'</span></span><span class="pl-s">              </span></span><span class="pl-c"># Do you want to Download the Sample Data Along with Joomla Installation, then keep it Yes</span>
+            <span class="pl-s"><span class="pl-ent">sample data:</span> <span class="pl-s"><span class="pl-pds">'</span>Default English (GB) Sample Data<span class="pl-pds">'</span></span><span class="pl-s">    </span></span><span class="pl-c"># Default Sample Data</span>
+            <span class="pl-s"><span class="pl-ent">admin email:</span> <span class="pl-s"><span class="pl-pds">'</span>admin@mydomain.com<span class="pl-pds">'</span></span><span class="pl-s">      </span></span><span class="pl-c"># email Id of the Admin</span>
+            <span class="pl-s"><span class="pl-ent">language:</span> <span class="pl-s"><span class="pl-pds">'</span>English (United Kingdom)<span class="pl-pds">'</span></span><span class="pl-s">   </span></span><span class="pl-c"># Language in which you want the Application to be Installed</span>
+            <span class="pl-s"><span class="pl-ent">joomla folder:</span> <span class="pl-s"><span class="pl-pds">'</span>/home/.../path to Joomla Folder<span class="pl-pds">'</span></span><span class="pl-s"> </span></span><span class="pl-c"># Path to Joomla installation where we execute the tests</span>
+        <span class="pl-s"><span class="pl-ent">AcceptanceHelper:</span></span>
+            ...</pre></div>
+
+<h2>
+<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tools</h2>
+
+<p>Joomla Browser comes with a set of tools added via robo.li</p>
+
+<h3>
+<a id="code-style-checker" class="anchor" href="#code-style-checker" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Style Checker</h3>
+
+<p>To check automatically the code style execute the following commands in your Terminal window at the root of the repository:</p>
+
+<ul>
+<li><code>$ composer install</code></li>
+<li><code>$ vendor/bin/robo</code></li>
+<li><code>$ vendor/bin/robo check:codestyle</code></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/joomla-projects">joomla-projects</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
