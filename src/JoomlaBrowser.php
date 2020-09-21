@@ -555,8 +555,9 @@ class JoomlaBrowser extends WebDriver
         $label = $this->findField(['xpath' => "//label[contains(normalize-space(string(.)), '$label')]"]);
         $radioId = $label->getAttribute('for');
 
-        $this->click("//fieldset[@id='$radioId']/label[contains(normalize-space(string(.)), '$option')]");
+        $this->click("//fieldset[@id='$radioId']/div/label[contains(normalize-space(string(.)), '$option')]");
     }
+
 
     /**
      * Selects an option in a Chosen Selector based on its label
@@ -595,10 +596,11 @@ class JoomlaBrowser extends WebDriver
      */
     public function selectOptionFromFancySelect($label, $option) {
 
-        $select = $this->findField($label);
-        $selectID = $select->getAttribute('id');
+        $this->debug("Try to find the label for $label");
+        $selectLabel = $this->findField(['xpath' => "//label[normalize-space(.)='$label']"]);
+        $selectID = $selectLabel->getAttribute('for');
 
-        $this->debug("I open the $label chosen selector");
+        $this->debug("I open the $label fancy selector");
         $this->click(['xpath' => "//select[@id='$selectID']/../.."]);
         $this->debug("I select $option");
         $this->scrollTo(['xpath' => '//select[@id="'.$selectID.'"]/../../div[2]/div/div[text()="'.$option.'"]']);
