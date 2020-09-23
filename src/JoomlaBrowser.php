@@ -190,7 +190,7 @@ class JoomlaBrowser extends WebDriver
         // @todo: update login button in joomla login screen to make this xPath more friendly
         $this->debug('I click Login button');
         $this->click($this->locator->loginButton);
-        $this->debug('I wait to see Frontend Member Profile Form with the Logout button in the module');
+        $this->debug('I wait to see Frontend Member Profile Form');
 
         $this->waitForElement($this->locator->frontEndLoginSuccess, TIMEOUT);
     }
@@ -785,8 +785,9 @@ class JoomlaBrowser extends WebDriver
         $this->acceptPopup();
         $this->waitForText('was successful', '30', ['id' => 'system-message-container']);
         $this->see('was successful', ['id' => 'system-message-container']);
-        #$this->debug('I check for warnings during the uninstall process');
-        #$this->dontSeeElement(['xpath' => "//joomla-alert[@type='warning']"]);
+        $this->debug('I check for warnings during the uninstall process');
+        $this->dontSeeElement(['xpath' => "//joomla-alert[@type='warning']"]);
+        $this->checkForPhpNoticesOrWarnings();
         $this->searchForItem($extensionName);
         $this->waitForText(
             'No Matching Results',
