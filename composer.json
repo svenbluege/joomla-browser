@@ -24,8 +24,6 @@
         "symfony/yaml"                          : "~3|~4"
     },
     "require-dev": {
-        "joomla-projects/joomla-testing-robo"   : "dev-container-test",
-        "codeception/codeception"               : "~2.4"
     },
     "autoload": {
         "psr-4": {
