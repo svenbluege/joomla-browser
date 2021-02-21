@@ -336,24 +336,13 @@ class JoomlaBrowser extends WebDriver
 
         // Scroll a to the next button and avoid collisions with the bottom bar.
         $this->scrollTo(['id' => 'installLanguagesButton'], 0, 200);
+        $this->wait(1); // wait, the scrolling might take a short amount of time.
 
         $this->click(['id' => 'installLanguagesButton']);
-        $this->waitForText('Multilingual', TIMEOUT, ['xpath' => '//h3']);
-        $this->selectOptionInRadioField('Activate the multilingual feature', 'Yes');
-        $this->waitForElementVisible(['id' => 'jform_activatePluginLanguageCode-lbl']);
-        $this->selectOptionInRadioField('Install localised content', 'Yes');
-        $this->selectOptionInRadioField('Enable the language code plugin', 'Yes');
-        $this->click(['link' => 'Next']);
 
-        $this->waitForText('Congratulations! Joomla! is now installed.', TIMEOUT, ['xpath' => '//h2']);
-        $this->debug('Removing Installation Folder');
-        $this->click(['xpath' => "//input[@value='Remove \"installation\" folder']"]);
-
-        // @todo https://github.com/joomla-projects/joomla-browser/issues/45
-        $this->wait(2);
+        $this->waitForText('Congratulations! Your Joomla site is ready.', TIMEOUT, ['xpath' => '//h2']);
 
         $this->debug('Joomla is now installed');
-        $this->see('Congratulations! Joomla! is now installed.', ['xpath' => '//h2']);
     }
 
     /**
